@@ -146,11 +146,11 @@ def extract_data_label(filename_feature):
     return fvecs_label,i    
   
 class_weight = np.array([1, 0.1, 1, 0.3, 0.3, 0.15])
-TrainLabel, TrainNum = extract_data_label('TrainingData/TrainDat_mel_scale.txt')
-TestLabel, TestNum = extract_data_label('TrainingData/TestDat_mel_scale.txt')
+TrainLabel, TrainNum = extract_data_label('Training Data/TrainDat_mel_scale.txt')
+TestLabel, TestNum = extract_data_label('Training Data/TestDat_mel_scale.txt')
 
-TrainData, TrainNum = extract_data_feature('TrainingData/TrainDat_mel_scale.txt')
-TestData, TestNum = extract_data_feature('TrainingData/TestDat_mel_scale.txt')
+TrainData, TrainNum = extract_data_feature('Training Data/TrainDat_mel_scale.txt')
+TestData, TestNum = extract_data_feature('Training Data/TestDat_mel_scale.txt')
   
 
 TrainData = AggreData(TrainData)
