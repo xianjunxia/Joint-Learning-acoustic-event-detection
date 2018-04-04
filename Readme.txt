@@ -1,6 +1,6 @@
 # Multi-task based joint learning acoustic event detection 
 
-1. Here, we provided the DNN based joinit learing training script as an example, two trained acoustic models (DNN-S & RNN-S) and the evaluation scripts. The metrics from the DCASE Challenge 2017 Task 3 was adopted to evaluate the performance of the acoustic event detection system. 
+1. Here, we provided the DNN based joint learning training scripts as an example, two trained acoustic models (DNN-S & RNN-S) and the evaluation metrics/scripts. The metrics from the DCASE Challenge 2017 Task 3 were adopted to evaluate the performance of the acoustic event detection system. 
 
 2. Requirements:
 numpy>=1.9.2
@@ -30,7 +30,7 @@ https://github.com/TUT-ARG/DCASE2017-baseline-system
 
 b. Replace the related scripts and the parameter files with the new scripts and the parameters provided here. 
 
-c.  Switch on the related functiones.{line 2119 (DNN-S) or line 2121 (RNN-S) in "learns.py".}
+c.  Switch on the related functiones.{line 2119 (DNN-S) or line 2121 (RNN-S) in "learners.py".}
 
 d.  Run "python task3.py -m challenge" and get the detection results.
 
