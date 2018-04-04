@@ -35,7 +35,7 @@ c.  Switch on the related functiones.{line 2119 (DNN-S) or line 2121 (RNN-S) in 
 d.  Run "python task3.py -m challenge" and get the detection results.
 
 
-4. Final detection results for the system with DNN-S is as following:
+4. Final detection results for the system with DNN-S are as following:
 
 Overall metrics:
 ===============
@@ -48,7 +48,7 @@ Overall metrics:
 
 
 
-5. Final detection results for the system with RNN-S is as following:
+5. Final detection results for the system with RNN-S are as following:
 
 Overall metrics
 ===============
