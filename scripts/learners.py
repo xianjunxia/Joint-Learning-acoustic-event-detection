@@ -2116,16 +2116,16 @@ class EventDetectorMLP(EventDetector, KerasMixin):
 
         ##### Note: the number of switch should be equal to 1 or 0 (the original DCASE Challenge 2017 Task 3)
         ### DNN-S evaluation switch
-        UseMLPJointSoft = 1
-        ### RNN-S evaluation switch
-        UseRNNJointSoft = 0
+        UseMLPJointSoft = 0
+        ### CNN-S evaluation switch
+        UseCNNJointSoft = 1
 
         UseDistSchem    = 0             
         UseCNNModel     = 0
         UseMLPModel     = 0
         UseMLPJointHard = 0 
-        UseCNNJointHard = 0
-        UseCNNJointSoft = 0
+        UseCNNJointHard = 0        
+        UseNNJointSoft  = 0
 
         if(UseCNNModel):            
             Modelname = 'H:/My Documents/Tools/RandomForestRegression/RFCForDCASE2017/CNN_Folder/Multi-Label-Image-Classification-master/Model_CNN_Classification/model_fold' + str(fold) +'.json'
@@ -2232,12 +2232,12 @@ class EventDetectorMLP(EventDetector, KerasMixin):
             x_test = AggreData(x_test,AggreNum = AggreNum)  
             out = loaded_model.predict([x_test,x_test])  #### out is 12031*12 dimension                        
             frame_probabilities = 0*out[:,0:6].T + 1*out[:,6:12].T             
-        if(UseCNNJointHard):
+        if(UseCNNJointSoft):
             
             DatDim = 40
-            AggreNum = 30   
-            Modelname = 'H:/My Documents/Tools/RandomForestRegression/RFCForDCASE2017/CNN_Folder/Multi-Label-Image-Classification-master/Model_CNN_JointHard/model_fold' + str(fold) +'.json'
-            WeightName = 'H:/My Documents/Tools/RandomForestRegression/RFCForDCASE2017/CNN_Folder/Multi-Label-Image-Classification-master/Model_CNN_JointHard/model_fold' + str(fold) +'.h5'            
+            AggreNum = 10   
+            Modelname = 'CNN-S.json'
+            WeightName = 'CNN-S.hdf5'
             json_file = open(Modelname, 'r')
             loaded_model_json = json_file.read()
             json_file.close()            
