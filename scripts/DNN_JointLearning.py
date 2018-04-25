@@ -1,9 +1,3 @@
-'''
-Basic demonstration of the capabilities of the CRNN using TimeDistributed layers
-Processes an MNIST image (or blank square) at each time step and sums the digits.
-Learning is based on the sum of the digits, not explicit labels on each digit.
-'''
-
 from __future__ import print_function
 import numpy as np
 import matplotlib.pyplot as plt
